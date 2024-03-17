@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://kuvdanfwx8re"]
+
+[ext_resource type="Script" path="res://wfc/WfcPrototype.gd" id="1_60nyq"]
+[ext_resource type="PackedScene" uid="uid://dk46tkkbu16u" path="res://objects/walls/Test/TestFloor.glb" id="2_e8k4f"]
+
+[node name="TestFloor" type="Node3D"]
+script = ExtResource("1_60nyq")
+
+[node name="TestFloor" parent="." instance=ExtResource("2_e8k4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)

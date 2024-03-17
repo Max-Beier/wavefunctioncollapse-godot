@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy1hb6fvkr6us"]
+
+[ext_resource type="Script" path="res://wfc/WfcPrototype.gd" id="1_3yrq5"]
+[ext_resource type="PackedScene" uid="uid://dk46tkkbu16u" path="res://objects/walls/Test/TestFloor.glb" id="2_26j5y"]
+[ext_resource type="PackedScene" uid="uid://hcqblkus0o61" path="res://objects/walls/Test/TestCorner.glb" id="3_kyx3t"]
+
+[node name="TestCorner" type="Node3D"]
+script = ExtResource("1_3yrq5")
+
+[node name="TestFloor" parent="." instance=ExtResource("2_26j5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="TestCorner" parent="." instance=ExtResource("3_kyx3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ipixg15nvvd8"]
+
+[ext_resource type="Script" path="res://wfc/WfcController.gd" id="1_j1qnb"]
+
+[node name="WfcController" type="Node"]
+script = ExtResource("1_j1qnb")

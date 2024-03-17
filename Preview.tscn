@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvdw7dps1an3q"]
+
+[ext_resource type="Script" path="res://wfc/WfcController.gd" id="1_mg8ty"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mlf8r"]
+
+[sub_resource type="Sky" id="Sky_k6x6a"]
+sky_material = SubResource("PhysicalSkyMaterial_mlf8r")
+
+[sub_resource type="Environment" id="Environment_ksgt3"]
+background_mode = 2
+sky = SubResource("Sky_k6x6a")
+
+[node name="Preview" type="Node3D"]
+
+[node name="WfcController" type="Node" parent="."]
+script = ExtResource("1_mg8ty")
+plot_size = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2, 4)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ksgt3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 6)
+skeleton = NodePath("../Camera3D")
